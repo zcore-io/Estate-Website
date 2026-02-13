@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Real Estate - Find Your Dream Home</title>
+    <meta name="description" content="Find your dream house with Real Estate. Browse properties, apartments, and homes for sale or rent." />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body>
+    <div id="page-loader" class="page-loader">
+      <div class="loader-spinner"></div>
+    </div>
+
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <header class="header">
+      <nav class="navbar navbar-expand-lg">
+        <div class="container align-items-center">
+          <a class="navbar-brand" href="#home">
+            <i class="fa-solid fa-house-chimney me-2"></i>
+            Real Estate
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#properties">Apartments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#blog">Blogs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="d-flex align-items-center gap-3 header-btn">
+            <a
+              href="#login"
+              class="text-white text-decoration-none small d-flex align-items-center gap-1 login-link"
+            >
+              <i class="fa-regular fa-user"></i>
+              Login
+            </a>
+
+            <a href="#add-listing" class="add-listing-btn">
+              <i class="fa-solid fa-plus me-1"></i>
+              Add Listing
+            </a>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero-section" id="home">
+      <div class="container">
+        <h1 class="hero-title animate-fade-in">Find Your Dream House</h1>
+        <p class="hero-subtitle animate-fade-in-delay">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi at
+          illum reprehenderit obcaecati, corporis.
+        </p>
+
+        <div class="search-box-container animate-slide-up">
+          <div class="search-btns">
+            <button class="search-btn-tab active" data-tab="buy">Buy</button>
+            <button class="search-btn-tab" data-tab="rent">Rent</button>
+            <button class="search-btn-tab" data-tab="sell">Sell</button>
+          </div>
+
+          <form class="search-form-inner" id="search-form">
+            <input type="text" placeholder="Enter Keyword" required />
+            <input type="text" placeholder="Your Name" required />
+            <input type="email" placeholder="Your Email" required />
+            <button type="submit" class="search-submit-btn">
+              <i class="fas fa-search"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section class="featured-properties py-5" id="properties">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-title">Featured Properties</h2>
+          <p class="section-subtitle text-muted">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+
+        <div class="row" id="properties-container">
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="https://images.pexels.com/photos/323775/pexels-photo-323775.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Gorgeous Villa" loading="lazy" />
+                <span class="badge badge-featured">Featured</span>
+                <span class="badge badge-sale">For Sale</span>
+                <div class="price-tag">$134,000</div>
+                <div class="property-action">
+                  <a href="#" class="btn-favorite" aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="btn-view" aria-label="View details"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-type text-primary-custom mb-2">
+                  Luxury Family Home
+                </div>
+                <h4 class="property-title"><a href="#property-detail">Gorgeous Villa</a></h4>
+                <p class="property-address">
+                  <i class="fa-solid fa-location-dot me-2"></i>USA, San Francisco
+                </p>
+                <div class="property-features">
+                  <span><i class="fa-solid fa-bed me-1"></i>3 Beds</span>
+                  <span><i class="fa-solid fa-bath me-1"></i>2 Baths</span>
+                  <span><i class="fa-solid fa-ruler-combined me-1"></i>1200 Sqft</span>
+                </div>
+              </div>
+              <div class="divider my-3"></div>
+              <div class="property-agent d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Ali Tufan" />
+                  <span class="agent-name">Ali Tufan</span>
+                </div>
+                <span class="post-date text-muted small">2 days ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Modern Apartment" loading="lazy" />
+                <span class="badge badge-featured">Featured</span>
+                <span class="badge badge-rent">For Rent</span>
+                <div class="price-tag">$2,500/mo</div>
+                <div class="property-action">
+                  <a href="#" class="btn-favorite" aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="btn-view" aria-label="View details"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-type text-primary-custom mb-2">
+                  Modern Apartment
+                </div>
+                <h4 class="property-title"><a href="#property-detail">Luxury Penthouse</a></h4>
+                <p class="property-address">
+                  <i class="fa-solid fa-location-dot me-2"></i>USA, New York
+                </p>
+                <div class="property-features">
+                  <span><i class="fa-solid fa-bed me-1"></i>2 Beds</span>
+                  <span><i class="fa-solid fa-bath me-1"></i>2 Baths</span>
+                  <span><i class="fa-solid fa-ruler-combined me-1"></i>950 Sqft</span>
+                </div>
+              </div>
+              <div class="divider my-3"></div>
+              <div class="property-agent d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Sarah Johnson" />
+                  <span class="agent-name">Sarah Johnson</span>
+                </div>
+                <span class="post-date text-muted small">5 days ago</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4">
+            <div class="property-card">
+              <div class="property-img">
+                <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Family House" loading="lazy" />
+                <span class="badge badge-sale">For Sale</span>
+                <div class="price-tag">$289,000</div>
+                <div class="property-action">
+                  <a href="#" class="btn-favorite" aria-label="Add to favorites"><i class="fa-regular fa-heart"></i></a>
+                  <a href="#" class="btn-view" aria-label="View details"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+              </div>
+              <div class="property-content">
+                <div class="property-type text-primary-custom mb-2">
+                  Family House
+                </div>
+                <h4 class="property-title"><a href="#property-detail">Cozy Family Home</a></h4>
+                <p class="property-address">
+                  <i class="fa-solid fa-location-dot me-2"></i>USA, Los Angeles
+                </p>
+                <div class="property-features">
+                  <span><i class="fa-solid fa-bed me-1"></i>4 Beds</span>
+                  <span><i class="fa-solid fa-bath me-1"></i>3 Baths</span>
+                  <span><i class="fa-solid fa-ruler-combined me-1"></i>1800 Sqft</span>
+                </div>
+              </div>
+              <div class="divider my-3"></div>
+              <div class="property-agent d-flex align-items-center justify-content-between">
+                <div class="d-flex align-items-center gap-2">
+                  <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Mike Davis" />
+                  <span class="agent-name">Mike Davis</span>
+                </div>
+                <span class="post-date text-muted small">1 week ago</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="city-section py-5 bg-light" id="cities">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <h2 class="section-title">Find Properties In These Cities</h2>
+          <p class="section-subtitle text-muted">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6">
+            <div class="city-card">
+              <img
+                src="https://images.pexels.com/photos/378570/pexels-photo-378570.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Miami"
+                loading="lazy"
+                class="city-img"
+              />
+              <div class="city-overlay">
+                <div class="city-info">
+                  <h4>Miami</h4>
+                  <p>24 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="city-card">
+              <img
+                src="https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="New York"
+                loading="lazy"
+                class="city-img"
+              />
+              <div class="city-overlay">
+                <div class="city-info">
+                  <h4>New York</h4>
+                  <p>36 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="city-card">
+              <img
+                src="https://images.pexels.com/photos/1034662/pexels-photo-1034662.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Los Angeles"
+                loading="lazy"
+                class="city-img"
+              />
+              <div class="city-overlay">
+                <div class="city-info">
+                  <h4>Los Angeles</h4>
+                  <p>18 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="city-card">
+              <img
+                src="https://images.pexels.com/photos/1470502/pexels-photo-1470502.jpeg?auto=compress&cs=tinysrgb&w=800"
+                alt="Chicago"
+                loading="lazy"
+                class="city-img"
+              />
+              <div class="city-overlay">
+                <div class="city-info">
+                  <h4>Chicago</h4>
+                  <p>29 Properties</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose-us py-5" id="services">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Why Choose Us</h2>
+          <p class="section-subtitle">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+          </p>
+        </div>
+
+        <div class="row text-center">
+          <div class="col-md-4 mb-4">
+            <div class="feature-box">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-users"></i>
+              </div>
+              <h4>Trusted by Thousands</h4>
+              <p class="text-muted">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-box">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-house-laptop"></i>
+              </div>
+              <h4>Wide Range of Properties</h4>
+              <p class="text-muted">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="feature-box">
+              <div class="icon-wrapper">
+                <i class="fa-solid fa-calculator"></i>
+              </div>
+              <h4>Financing Made Easy</h4>
+              <p class="text-muted">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ipsam.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="article-sec py-5" id="blog">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Articles & Tips</h2>
+          <p class="section-subtitle">Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="article-card">
+              <div class="article-img">
+                <img src="https://images.pexels.com/photos/1546168/pexels-photo-1546168.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Real Estate Tips" loading="lazy" />
+              </div>
+              <div class="article-content">
+                <span class="tag">Business</span>
+                <h4>Skills That You Can Learn In the Real Estate Market</h4>
+                <div class="article-meta">
+                  <div class="author">
+                    <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Ali Tufan" />
+                    <span>Ali Tufan</span>
+                  </div>
+                  <span class="date">21 Dec 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="article-card">
+              <div class="article-img">
+                <img src="https://images.pexels.com/photos/280229/pexels-photo-280229.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Home Investment" loading="lazy" />
+              </div>
+              <div class="article-content">
+                <span class="tag">Investment</span>
+                <h4>How To Invest In Real Estate For Maximum Returns</h4>
+                <div class="article-meta">
+                  <div class="author">
+                    <img src="https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Sarah Johnson" />
+                    <span>Sarah Johnson</span>
+                  </div>
+                  <span class="date">18 Dec 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-4">
+            <div class="article-card">
+              <div class="article-img">
+                <img src="https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Home Buying Guide" loading="lazy" />
+              </div>
+              <div class="article-content">
+                <span class="tag">Guide</span>
+                <h4>Complete Guide To Buying Your First Home</h4>
+                <div class="article-meta">
+                  <div class="author">
+                    <img src="https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=200" alt="Mike Davis" />
+                    <span>Mike Davis</span>
+                  </div>
+                  <span class="date">15 Dec 2024</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partner-sec py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title">Our Partners</h2>
+          <p class="section-subtitle">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+          <div class="col-lg-2 col-md-4 col-6">
+            <div class="partner-slide">
+              <img src="https://via.placeholder.com/150x80/f7f7f7/555555?text=Partner+1" alt="Partner 1" loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <div class="partner-slide">
+              <img src="https://via.placeholder.com/150x80/f7f7f7/555555?text=Partner+2" alt="Partner 2" loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <div class="partner-slide">
+              <img src="https://via.placeholder.com/150x80/f7f7f7/555555?text=Partner+3" alt="Partner 3" loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <div class="partner-slide">
+              <img src="https://via.placeholder.com/150x80/f7f7f7/555555?text=Partner+4" alt="Partner 4" loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <div class="partner-slide">
+              <img src="https://via.placeholder.com/150x80/f7f7f7/555555?text=Partner+5" alt="Partner 5" loading="lazy" />
+            </div>
+          </div>
+          <div class="col-lg-2 col-md-4 col-6">
+            <div class="partner-slide">
+              <img src="https://via.placeholder.com/150x80/f7f7f7/555555?text=Partner+6" alt="Partner 6" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contact">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-8">
+            <h2 class="text-white mb-2">Become a Real Estate Agent</h2>
+            <p class="text-white-50 m-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore!</p>
+          </div>
+          <div class="col-lg-4 text-lg-end text-center mt-lg-0 mt-3">
+            <a href="#register" class="btn btn-light-custom">Register Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 mb-4">
+            <div class="footer-about">
+              <a href="#home" class="navbar-brand mb-3 d-inline-block" style="font-size: 24px; color: white;">
+                <i class="fa-solid fa-house-chimney me-2"></i>Real Estate
+              </a>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi!</p>
+            <div class="social-links mt-4">
+              <a href="#facebook" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+              <a href="#twitter" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+              <a href="#instagram" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#services">Terms & Conditions</a></li>
+              <li><a href="#guide">User's Guide</a></li>
+              <li><a href="#support">Support Center</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h4>Contact</h4>
+            <ul class="footer-links">
+              <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+              <li><a href="mailto:info@realestate.com">info@realestate.com</a></li>
+              <li><a href="#location">123 Main St, NY</a></li>
+              <li><a href="#support">Support</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-12 mb-4">
+            <h4>Subscribe</h4>
+            <form class="subscribe-form" id="subscribe-form">
+              <input type="email" placeholder="Your email" required />
+              <button type="submit" aria-label="Subscribe">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="row">
+            <div class="col-md-6 text-center text-md-start">
+              <p class="m-0 text-white-50">&copy; 2026 Real Estate. All Rights Reserved</p>
+            </div>
+            <div class="col-md-6 text-center text-md-end">
+              <ul class="d-flex justify-content-center justify-content-md-end gap-3 footer-bottom-links m-0">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#properties">Listing</a></li>
+                <li><a href="#properties">Property</a></li>
+                <li><a href="#about">About Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
